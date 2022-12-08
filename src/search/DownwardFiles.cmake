@@ -798,6 +798,14 @@ fast_downward_plugin(
     DEPENDENCY_ONLY
 )
 
+fast_downward_plugin(
+    NAME MSCP
+    HELP ""
+    SOURCES
+        ms_cp/mscp_heuristic
+    DEPENDS TASK_PROPERTIES
+)
+
 fast_downward_add_plugin_sources(PLANNER_SOURCES)
 
 # The order in PLANNER_SOURCES influences the order in which object
