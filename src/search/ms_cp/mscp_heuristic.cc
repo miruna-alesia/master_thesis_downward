@@ -25,7 +25,7 @@ MSCPHeuristic::MSCPHeuristic(const Options &opts)
     : Heuristic(opts),
       log(utils::get_log_from_options(opts)),
       fts(merge_and_shrink::create_factored_transition_system(task_proxy, true, true, log)),
-      testint(opts.get<int>("testint")) {
+      treshold(opts.get<int>("treshold")) {
       if (fts.get_num_active_entries() >= 2) {
 
           for (int i = 0; i < fts.get_num_active_entries(); ++i) {
@@ -39,8 +39,8 @@ MSCPHeuristic::MSCPHeuristic(const Options &opts)
           }
 
               // get the first 2 transition systems
-          const merge_and_shrink::TransitionSystem &tr_sys0 = fts.get_transition_system(6);
-          const merge_and_shrink::TransitionSystem &tr_sys1 = fts.get_transition_system(7);
+//          const merge_and_shrink::TransitionSystem &tr_sys0 = fts.get_transition_system(6);
+//          const merge_and_shrink::TransitionSystem &tr_sys1 = fts.get_transition_system(7);
 
 //          // compute the distances for both
 //          unique_ptr <merge_and_shrink::Distances> dist0 = utils::make_unique_ptr<merge_and_shrink::Distances>(tr_sys0);

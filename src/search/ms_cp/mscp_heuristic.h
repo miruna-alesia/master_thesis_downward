@@ -15,7 +15,7 @@ namespace mscp_heuristic {
 class MSCPHeuristic : public Heuristic {
     mutable utils::LogProxy log;
     merge_and_shrink::FactoredTransitionSystem fts;
-    int testint;
+    int treshold;
     int idist;
     int idist0;
     int idist1;
