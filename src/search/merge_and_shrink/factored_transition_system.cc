@@ -204,8 +204,6 @@ std::unique_ptr<TransitionSystem> FactoredTransitionSystem::merge_and_keep(
             *transition_systems[index1],
             *transition_systems[index2],
             log);
-
-//    return *(merged_tr_sys_ptr.get());
 }
 
 pair<unique_ptr<MergeAndShrinkRepresentation>, unique_ptr<Distances>>
